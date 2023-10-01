@@ -20,3 +20,14 @@ jobs:
       - name: Check workflow files
         run: ${{ steps.get_actionlint.outputs.executable }} -color
         shell: bash
+- name: Setup mabl CLI
+  # You may pin to the exact commit or the version.
+  # uses: mablhq/setup-mabl-cli@39efbbbf128ff7f928f1012d287ce851eb40d001
+  uses: mablhq/setup-mabl-cli@v1.3
+  with:
+    # (optional) The version of the mabl CLI to install
+    version: # optional
+    # (optional) DEPRECATED use workspace-id
+    workspace: # optional
+    # (optional) The id of the workspace to configure as default for the CLI
+    workspace-id: # optional
